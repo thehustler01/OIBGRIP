@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    height: auto;
+    /* background: #00539cff; */
+    background: linear-gradient(139deg, rgb(3, 10, 16) 0%, rgb(63, 63, 66) 90%);
+    
+}
+
+.container{
+    position: relative;
+    max-width: 100% auto;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+.heading{
+    height: auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 26px;
+    font-size: 51px;
+    font-family: 'Tangerine', cursive;    
+}
+.addTask{
+        width: 40%;
+    display: flex;
+    padding: 65px 0;
+    margin: auto;
+    position: relative;
+    top: 46%;
+}
+.addTask > input[type="text"]{
+    width: 90%;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+.addTask button{
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task_block{
+    width: 100%;
+    height:auto;
+    padding: 3%;
+    position: relative;
+}
+.notCompleted, .Completed{
+    margin: 5px 0;
+    padding: 20px;
+    display: flex;
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li{
+    /* width: 100%; */
+    padding: 18px;
+    /* color: #fff; */
+    /* margin: 5px 0; */
+    /* background: #e96969bb; */
+    font-size: 22px;
+    counter-increment: my-counter;
+
+    position: relative;
+    width: 280px;
+    height:400px;
+    margin:30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    /* background: rgba(255, 255, 255, 0.1);  */
+    /* background: linear-gradient(135deg, rgb(48 11 11) 0%, rgb(103 90 90) 90%);  */
+    background: linear-gradient(135deg, rgb(79 8 8) 0%, rgb(111 82 82) 90%);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+
+}
+ol.Completed li{
+    /* background: linear-gradient(139deg, rgb(51, 245, 122) 0%, rgb(143, 238, 143) 90%); */
+    /* background: linear-gradient(135deg, rgb(48 11 11) 0%, rgb(103 90 90) 90%); */
+    background: linear-gradient(135deg, rgb(0 54 24 / 59%) 0%, rgb(90 103 96) 90%);
+
+}
+ol li::before{
+    content: counter(my-counter);
+    line-height: 4rem;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    left:15px;
+    font-size:7em;
+    color:rgba(255,255,255,0.05);
+    pointer-events:none;
+}
+li button{
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* ############################################# */
+.RED, .GREEN{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+/* .RED::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at right 70%);
+} */
+
+.chk_btn{
+    position: absolute;
+    bottom: 35px;
+    left: 25%;
+}
+.dlt_btn{
+    position: absolute;
+    bottom: 35px;
+    right: 25%;
+}
+.dlt_btn2{
+    position: absolute;
+    bottom: 35px;
+    right: 50%;
+}
+.card_txt{
+    color:brown;
+}

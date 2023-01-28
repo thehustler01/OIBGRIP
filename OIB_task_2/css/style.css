@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* #################################   navigation bar  #######################################  */
+
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(250 250 250); */
+    background-color: rgb(27 27 27 );
+    height: 47px;
+    top: 0px;
+    z-index: 100;
+    /* opacity: 0.9; */
+}
+#navbar::before{
+    content: '';
+    /* background-color: rgb(14 13 13); */
+    background-color:rgb(27 27 27 );
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* navigation bar :logo */
+/* #logo{
+    display: flex;
+    position: absolute;
+    margin:12px 56px;
+}
+.logo_gif{
+    width: 47px;
+    margin-right: 10px;
+    border-radius: 5px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+/* navigation bar :menu tab */
+.menu{
+    position: absolute;
+    left: 45%;
+    display:flex;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    font-family: Arial,sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgb(97 97 97);
+    padding: 3px 12px;
+}
+.menu a:hover{
+    color: #efefef;
+}
+
+/* #####################################  blocks  #######################################  */
+#home ,#contact{
+    width:100%;
+    height:100vh;
+
+}
+#timeline{
+    width:100%;
+    height:227vh;
+    /* padding-top: 65px; */
+    /* background-color: rgb(255, 255, 255); */
+}
+#home,#contact{
+    background-color: rgb(27 27 27 );
+}
+
+/* **************************   home   ******************************** */
+
+
+.intro{
+    position: absolute;
+    right: 0%;
+    top: 44%;
+    width: 50%;
+    height: 100vh;
+}
+.intro h1{
+    color: #efefef;
+    font-weight: unset;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    font-size: 545%;
+}
+.intro h3{
+    color: rgb(83, 72, 72);
+    font-weight: 400;
+    font-size: 253%;
+}
+.intro h5{
+    color:rgb(83, 72, 72);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    font-size: 133%;
+}
+
+/* .center_img_block{
+    left:0%;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+} */
+.center_img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 57%;
+    height: 94.3vh;
+    left: -2%;
+    top:12%;
+}
+
+/* **************************   timeline   ************************ */
+
+
+
+.Timeline{
+    position: relative;
+    max-width: 1200px;
+    margin:100px auto ;
+}
+.Timeline h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 39px;
+}
+.container{
+    position: relative;
+    width: 42%;
+    padding: 10px 48px;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 2s;
+}
+.container:nth-child(3){
+    animation-delay: 4s;
+}
+.container:nth-child(4){
+    animation-delay: 6s;
+}
+.container:nth-child(5){
+    animation-delay: 8s;
+}
+.container:nth-child(6){
+    animation-delay: 10s;
+}
+.container:nth-child(7){
+    animation-delay: 12s;
+}
+.text-box{
+    position: relative;
+    background: rgb(149, 59, 45);
+    padding: 20px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 173px;
+    /* box-shadow: 1px 1px 20px #14eacfff,1px 1px 40px #14eacfff; */
+    animation: anime 1s linear infinite;
+}
+.large_box{
+    height:200px;
+}
+.text-box p{
+    font-family:'Times New Roman', Times, serif;
+    font-size:15px;
+}
+.RED{
+    box-shadow: 1px 1px 20px rgb(234, 20, 20),1px 1px 40px rgb(240, 43, 36);
+}
+.YELLOW{
+    box-shadow: 1px 1px 20px rgb(241, 249, 17),1px 1px 40px rgb(239, 233, 46);
+}
+.GREEN{
+    box-shadow: 1px 1px 20px rgb(33, 225, 40),1px 1px 40px rgb(83, 237, 75);
+}
+.BLUE{
+    box-shadow: 1px 1px 20px rgb(15, 78, 237),1px 1px 40px rgb(46, 114, 231);
+}
+.left-one{
+    left:0%;
+}
+.right-one{
+    left:50%;
+}
+
+/*---- logo --- */
+.container img{
+    position: absolute;
+    width: 53px;
+    border-radius: 50%;
+    right: -27px;
+    top: 32px;
+    z-index: 10;
+}
+.right-one img{
+    left: -26px;
+}
+
+.Timeline::after{
+    content:'';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #000;
+    top:5%;
+    left:50%;
+    margin-left: -3px;
+    z-index:-1;
+    animation: moveline 13s linear forwards;
+
+}
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height:100%;
+    }
+}
